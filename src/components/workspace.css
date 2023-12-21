@@ -1,0 +1,31 @@
+.dashboard {
+   background-color: whitesmoke;
+   height: calc(100vh - 5.5rem);
+
+   display: flex;
+   flex-direction: row;
+   padding: 0 2rem;
+
+   margin-bottom: 8px;
+   overflow-x: auto;
+   overflow-y: auto;
+   -webkit-user-select: none;
+   user-select: none;
+}
+
+.dashboard>div {
+   padding: 0 0.5rem;
+}
+
+@media (max-width: 767px) {
+   .dashboard {
+      scroll-snap-type: x mandatory;
+      /* scroll-padding: 0 10px; */
+      margin: 0;
+      padding: 0;
+   }
+
+   .dashboard>* {
+      scroll-snap-align: start;
+   }
+}

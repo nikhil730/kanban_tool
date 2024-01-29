@@ -13,6 +13,7 @@ import SyncIcon from '@mui/icons-material/Sync';
 
 
 function List(props) {
+    
     const { tickets, order } = useContext(AppContext);
     const { status } = props;
 
@@ -31,8 +32,9 @@ function List(props) {
             <div>
                 <ListHeader title={props.title} length={prioritySortedTickets.length} icon={props.icon} />
                 {prioritySortedTickets.map((props) => (
+                    
 
-                    <Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} footerIcon={props.priority} />
+                    <Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} footerIcon={props.priority} like={props.like} comm={props.comm}/>
 
                 ))}
             </div>
@@ -46,7 +48,7 @@ function List(props) {
                 <ListHeader title={props.title} length={prioritySortedTickets.length} icon={props.icon} />
                 {titleSortedTickets.map((props) => (
 
-                    <Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} footerIcon={props.priority} />
+                    <Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} footerIcon={props.priority} like={props.like} comm={props.comm}/>
 
                 ))}
             </div>

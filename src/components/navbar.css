@@ -39,7 +39,7 @@
 
 
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
     align-items: center;
     width: 100vw;
 
@@ -155,7 +155,9 @@
     flex: auto;
     font-weight: 500;
 }
-
+.logo{
+    margin-left: 20px;
+}
 
 .dropIcon {
     font-size: 24px;

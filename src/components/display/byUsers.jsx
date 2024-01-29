@@ -27,7 +27,7 @@ function List(props) {
                 <ListHeader title={props.title} length={prioritySortedTickets.length} icon={props.icon} />
                 {prioritySortedTickets.map((props) => (
 
-                    <Card key={props.id} id={props.id} title={props.title} tag={props.tag} headerIcon={false} bodyIcon={props.status} footerIcon={props.priority} />
+                    <Card key={props.id} id={props.id} title={props.title} tag={props.tag} headerIcon={false} bodyIcon={props.status} footerIcon={props.priority} like={props.like} comm={props.comm}/>
 
                 ))}
             </div>
@@ -41,7 +41,7 @@ function List(props) {
                 <ListHeader title={props.title} length={prioritySortedTickets.length} icon={props.icon} />
                 {titleSortedTickets.map((props) => (
 
-                    <Card key={props.id} id={props.id} title={props.title} tag={props.tag} headerIcon={false} bodyIcon={props.status} footerIcon={props.priority} />
+                    <Card key={props.id} id={props.id} title={props.title} tag={props.tag} headerIcon={false} bodyIcon={props.status} footerIcon={props.priority} like={props.like} comm={props.comm} />
 
                 ))}
             </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Workspace from "./components/workspace";
+import data from "./data/data";
 
 export const AppContext = React.createContext();
 
@@ -20,6 +21,9 @@ function App() {
   const [order, setOrder] = useState(getInitOrderState);
   const [users, setUsers] = useState([]);
   const [tickets, setTickets] = useState([]);
+  console.log(data);
+  // setTickets(data.tickets);
+  // setUsers(data.users);
 
   useEffect(() => {
     fetchUserData();
@@ -27,17 +31,12 @@ function App() {
 
   //fetching data from API
   const fetchUserData = () => {
-    fetch(
-      "https://tfyincvdrafxe7ut2ziwuhe5cm0xvsdu.lambda-url.ap-south-1.on.aws/ticketAndUsers"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setTickets(data.tickets);
-        setUsers(data.users);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    try {
+      setTickets(data.tickets);
+      setUsers(data.users);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   // Save state to localStorage whenever group or order changes

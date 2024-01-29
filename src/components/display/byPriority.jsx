@@ -30,7 +30,7 @@ function List({ title, icon, priority }) {
 			<div>
 				<ListHeader title={title} length={prioritySortedTickets.length} icon={icon} />
 				{prioritySortedTickets.map((props) => (
-					<Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} bodyIcon={props.status} />
+					<Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} bodyIcon={props.status} like={props.like} comm={props.comm}/>
 				))}
 			</div>
 		)
@@ -40,7 +40,7 @@ function List({ title, icon, priority }) {
 			<div>
 				<ListHeader title={title} length={prioritySortedTickets.length} icon={icon} />
 				{titleSortedTickets.map((props) => (
-					<Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} bodyIcon={props.status} />
+					<Card key={props.id} id={props.id} userId={props.userId} title={props.title} tag={props.tag} headerIcon={true} bodyIcon={props.status} like={props.like} comm={props.comm} />
 				))}
 			</div>
 		)

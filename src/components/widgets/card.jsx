@@ -128,7 +128,7 @@ export default function Card({
         {title}
       </div>
       <div className="cardFooter">
-        {footerIcon !== -1 ? (
+        {/* {footerIcon !== -1 ? (
           <div className="cardFooterIcon fade-in-scale">
             {footerIcons.map(
               (item, index) =>
@@ -137,7 +137,7 @@ export default function Card({
           </div>
         ) : (
           <></>
-        )}
+        )} */}
         <div className="cardFooterTitle">
           {tag ? (
             tag.map((tag, index) => (
